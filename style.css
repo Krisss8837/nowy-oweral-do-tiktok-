@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+/* Główny kontener paska */
+.banner-container {
+    width: 100vw;
+    height: 120px;
+    background: black;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Ścieżka, która przesuwa oba obrazki */
+.banner-track {
+    display: flex;
+    width: max-content;
+    animation: scrollBanner 30s linear infinite;
+}
+
+/* Wygląd obrazka */
+.banner-image {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+/* Płynna animacja przewijania od lewej do prawej */
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
